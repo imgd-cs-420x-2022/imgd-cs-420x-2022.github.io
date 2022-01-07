@@ -18,25 +18,26 @@ Assignments and examples for this class will primarily use GLSL / JavaScript, ho
 This is an experimental course; as such this outline is subject to change. I am happy to make minor additions if there are related topics of interest that are not mentioned here... please let me know!  
 
 ### Week 1: Getting Started / Review
-1/12 - *Basic Intro to WebGL / Shader programmming*. [Notes](./notes.day1.md)Assignment:  Complete the [onboarding assignment](./onboarding.md). Due 1/20.  
-1/13 - *GLSL Live Coding*.  Assignment: 
-  I. Read / experiment with [The Book of Shaders](http://thebookofshaders.com) up through the lesson on [Noise](https://thebookofshaders.com/11/). 
-  II. Complete the [Shader Live Coding Assignment](./shader_live_coding.md) also due 1/20.
-Resources:  
-- [WebGL Fragment Shader Template](./webgl_template.md)
+1/12 - [*Basic Intro to WebGL / Shader programmming*](./notes.day1.md) Assignment:  
+  - Complete the [onboarding](./onboarding.md). Due 1/20.  
+1/13 - *GLSL Live Coding*.  Assignments:  
+  - Read / experiment with [The Book of Shaders](http://thebookofshaders.com) up through the lesson on [Noise](https://thebookofshaders.com/11/).  
+  - Complete the [Shader Live Coding Assignment](./shader_live_coding.md) also due 1/20.  
 
 ### Week 2: History-Analog synthhesis and video feedback
 1/17 - Martin Luther King Jr. Day - NO CLASS  
-1/20 -  *Video Synthesis History and Video Processing*. 
-  I. Analog synthesis history [Notes](./notes.day3.md).  
-  II. Using textures, images, andd live video input. [Notes](./notes.day4.md)  
+1/20 -  *Video Synthesis History and Video Processing*.  
+  - [Analog synthesis history](./notes.day3.md).
+  - [Using textures, images, andd live video input](./notes.day4.md)  
 
 ### Week 3: Automata, Reaction Diffusion, and Rendering to Texture
 1/24 - Rendering to Texture, 1D / 2D Automata, Game of Life
 1/27 - Reaction Diffusion
  
 ### Week 4: Perlin Flows and Modular GLSL,
-1/31 -  Modular GLSL. [Notes](./notes.day8.md). Assignment: [Simulation](./simulation.md) due 2/20. Assignment: Read the chapters on [Cellular Noise](https://thebookofshaders.com/12/) and [Fractal Brownian Motion](https://thebookofshaders.com/13/) in the Book of Shaders.  
+1/31 -  [Modular GLSL](./notes.day8.md). Assignments: 
+  - [Simulation](./simulation.md) due 2/20. 
+  - Read the chapters on [Cellular Noise](https://thebookofshaders.com/12/) and [Fractal Brownian Motion](https://thebookofshaders.com/13/) in the Book of Shaders.  
 
 ### Week 5: Interaction in Digital Arts
 
