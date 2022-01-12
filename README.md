@@ -18,7 +18,7 @@ Assignments and examples for this class will primarily use GLSL / JavaScript, ho
 This is an experimental course; as such this outline is subject to change. I am happy to make minor additions if there are related topics of interest that are not mentioned here... please let me know!  
 
 ### Week 1: Getting Started / Review
-1/12 - [*Basic Intro to WebGL / Shader programmming*](./notes.day1.md) Assignment:  
+1/12 - [*Basic Intro to WebGL / Shader programmming*](./notes.day1.intro_to_shaders.md) Assignment:  
   - Complete the [onboarding](./onboarding.md). Due 1/20.  
 
 1/13 - *GLSL Live Coding*.  Assignments:  
