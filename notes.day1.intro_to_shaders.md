@@ -102,4 +102,6 @@ void main() {
 ```
 
 ### Adding the FFT
-In The Force, we can get access to the data from our laptop microphones by clicking on the microphone button at the bottom of the screen. Once you’ve granted Firefox access to use the microphone, the FFT data will then be available in a four-item uniform named `bands`, where `bands[0]` is the low-frequency content and `bands[3]` is the high frequency content. Try setting the value of `gain` in the above script to use one of these bands and have fun watching the results… and then try messing around with the formula in other ways, dividing instead of of multiplying, use fewer or more iterations of the for loop etc.
+In The Force, we can get access to the data from our laptop microphones by clicking on the microphone button at the bottom of the screen. Once you’ve granted Firefox access to use the microphone, the FFT data will then be available in a four-item uniform named `bands`, where `bands.x` is the low-frequency content and `bands.z` is the high frequency content. Try setting the value of `gain` in the above script to use one of these bands and have fun watching the results… and then try messing around with the formula in other ways, dividing instead of of multiplying, use fewer or more iterations of the for loop etc.
+
+*IMPORTANT: The audio input function does not appear to be working in Firefox under Linux. Try running the Force in a different browser if you have trouble getting `bands` to work correctly.*
