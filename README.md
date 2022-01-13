@@ -21,11 +21,11 @@ This is an experimental course; as such this outline is subject to change. I am 
 1/12 - [*Basic Intro to WebGL / Shader programmming*](./notes.day1.intro_to_shaders.md) Assignment:  
   - Complete the [onboarding](./onboarding.md). Due 1/20.  
 
-1/13 - *GLSL Live Coding*.  Assignments:  
+1/13 - *GLSL Live Coding and History-Visual Music*.  Assignments:  
   - Read / experiment with [The Book of Shaders](http://thebookofshaders.com) up through the lesson on [Noise](https://thebookofshaders.com/11/).  
-  - Complete the [Shader Live Coding Assignment](./shader_live_coding.md) also due 1/20.  
+  - Complete the [Shader Live Coding Assignment](./A1.shader_live_coding.md) also due 1/20.  
 
-### Week 2: History-Analog synthhesis and video feedback
+### Week 2: History-Analog synthesis and video feedback
 1/17 - Martin Luther King Jr. Day - NO CLASS  
 
 1/20 -  *Video Synthesis History and Video Processing*.  
