@@ -36,9 +36,9 @@ void main () {
     cords_D.y += cos(warppedTime);
     
     vec4 A = vec4(rmf(cords_A, num));
-    vec4 B = vec4(rmf(cords_B, num));
-    vec4 C = vec4(rmf(cords_C, num)); 
-    vec4 D = vec4(rmf(cords_D, num)); 
+    vec4 B = vec4(fbm(cords_B, num));
+    vec4 C = vec4(vrmf(cords_C, num)); 
+    vec4 D = vec4(vfbm(cords_D, num)); 
     vec4 ABC = A + B + C + D + lowMid;
     
     if(cords.y < -0.5){
