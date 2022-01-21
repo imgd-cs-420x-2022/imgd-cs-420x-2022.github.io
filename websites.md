@@ -3,3 +3,4 @@ First, fork the course repo in Github. Then, in your fork, open this file (websi
 
 - [Charlie Roberts (example)](https://charlie-roberts.com)
 - [Marcelino Puente-Perez](https://github.com/marzpuente/mjpuenteperez420X/blob/main/README.md)
+- [Sam Rodgers](https://github.com/samuelrodgers/CS420X_Sam_Rodgers)
