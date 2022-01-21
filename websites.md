@@ -16,3 +16,4 @@ First, fork the course repo in Github. Then, in your fork, open this file (websi
 - [Sam Rodgers](https://github.com/samuelrodgers/CS420X_Sam_Rodgers)
 - [Garrett Sheehan](https://justgaret23.github.io/)
 - [Evelyn Tran](https://github.com/evelyntrvn/CS420X)
+- [Eli Benevedes](https://github.com/Ronoman/CS420X-Project/tree/main)
