@@ -14,15 +14,12 @@ void main() {
   p.y += mod(p.y - time/1000., 1.+1.5*cos(time));
 
   for( float i = 0.; i < 4.; i++ ) { 
-    //p.y += sin( p.x + time * i) * gain;
     p.x += sin(p.y + time * i) * gain;
     
     p.yx = rotate(p, vec2(0, 0), time*0.1).xy;
     
     color += abs( sin(0.5*time)/5.*thickness / p.y + sin(time*0.5)/2.*thickness / p.x);
   }
-  
-  
   
   vec4 lastFrame = texture2D(backbuffer, rotate(p, vec2(0, 0), time*2.));
   
