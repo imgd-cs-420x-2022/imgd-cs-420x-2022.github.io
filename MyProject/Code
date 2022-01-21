@@ -1,0 +1,16 @@
+void main(){
+    float x1 = sin(rotate(uvN(), vec2(0.2,0.1), -time*0.01).x * floor(0.2));
+    vec3 v1 = x1 * red;
+
+    float x2 = sin(mix(rotate(uv(), vec2(0,0.7), sin(-time*1.2)).y,
+        exp2(exp2(rotate(uv(), vec2(0.6, -0.3), cos(time*0.3)).x)),2.1) *time * 0.001);
+    vec3 v2 = x2 * blue;
+
+    float x3 = sin(rotate(uv(), vec2(0.1,3), time*0.06).x * time * 0.012);
+    vec3 v3 = x3 * blue;
+
+    float x4 = voronoi(rotate(uv(), vec2(0.789, -0.13), -time*0.83) * sin(time * (ceil(.9)+.01)));
+    vec3 v4 = x4 * purple;
+
+    gl_FragColor = vec4(black + v1 + v2 + v3 + abs(v4), 1.0);
+}
