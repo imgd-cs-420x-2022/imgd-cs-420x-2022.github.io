@@ -11,3 +11,4 @@ First, fork the course repo in Github. Then, in your fork, open this file (websi
 - [Jacob Pelrah](https://github.com/JakePelrah/IMGD-CS-420x-Projects)
 - [Marcelino Puente-Perez](https://github.com/marzpuente/mjpuenteperez420X/blob/main/README.md)
 - [Sam Rodgers](https://github.com/samuelrodgers/CS420X_Sam_Rodgers)
+- [Evelyn Tran](https://github.com/evelyntrvn/CS420X)
