@@ -2,6 +2,7 @@
 First, fork the course repo in Github. Then, in your fork, open this file (websites.md). Copy and paste one of the lines below and edit it to include your name and a link to your website for the class. Commit your changes and make a pull request back to the original repo.
 
 - [Brennan Aubuchon](https://github.com/bjaubuchon/cs-420x)
+- [Eli Benevedes](https://github.com/Ronoman/CS420X-Project/tree/main)
 - [Gregory Conrad](https://github.com/GregoryConrad/CS420x)
 - [Billy Cross](https://github.com/billymcross/billy-cross-graphical-systems)
 - [Jasmine Duerk](https://github.com/jlduerk/CS420X)
@@ -16,4 +17,3 @@ First, fork the course repo in Github. Then, in your fork, open this file (websi
 - [Sam Rodgers](https://github.com/samuelrodgers/CS420X_Sam_Rodgers)
 - [Garrett Sheehan](https://justgaret23.github.io/)
 - [Evelyn Tran](https://github.com/evelyntrvn/CS420X)
-- [Eli Benevedes](https://github.com/Ronoman/CS420X-Project/tree/main)
