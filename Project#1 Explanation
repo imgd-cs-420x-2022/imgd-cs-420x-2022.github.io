@@ -1,8 +1,0 @@
-For my GLSL animation I wanted to make use of waveforms because we had gone over them in class and I wasn't particularly well versed in GLSL’s mathematical functions. 
-I was able to make use of three different wave functions, run them each through a for loop and plug each of them into the respective R,G,B slots of the vec4 for gl_FragColor. 
-The aesthetic intent I was aiming for was a color scheme style light show similar to that of psychedelic music videos from the 1970’s. 
-The feathering of the lines provide a glow that helped to give the animation a more dated look in my opinion. 
-This in turn helped to add more of a mysterious psychological look which I think worked quite nicely.
-
-This is quite off topic, but after completing the script, I also noticed that the way the colors mix and glow reminds me quite a bit 
-of the colors seen on the netflix loading screen at the moment right when the camera zooms way in on the logo revealing many dazzling lights.
