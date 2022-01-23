@@ -7,6 +7,7 @@ First, fork the course repo in Github. Then, in your fork, open this file (websi
 - [Billy Cross](https://github.com/billymcross/billy-cross-graphical-systems)
 - [Jasmine Duerk](https://github.com/jlduerk/CS420X)
 - [Justin Gaborit](https://justin-gaborit.github.io/Justins-Graphics-Assignments/)
+- [Geoffrey Garsson](https://github.com/gdgarsson/CS420X-Garsson)
 - [Karen Hou](https://github.com/kerneylh/KH-420x-2022)
 - [Matt Johannesen](https://github.com/m-d-jo/cs-420x-demos) 
 - [Yongcheng Liu](https://github.com/wDANDANw/CS-420X-)
