@@ -48,7 +48,7 @@ function makeTexture() {
   
   gl.texImage2D( 
     gl.TEXTURE_2D,    // target: you will always want gl.TEXTURE_2D
-    0,                // level of detail: 0 is the base, higher values are for mipmaps
+    0,                // level of detail: 0 is the base, other values are for mipmaps
     gl.RGBA, gl.RGBA, // color formats, for webgl1 these must be the same
     gl.UNSIGNED_BYTE, // type: the type of texture data, 0-255
     greencanvas       // pixel source: could also be video or image
