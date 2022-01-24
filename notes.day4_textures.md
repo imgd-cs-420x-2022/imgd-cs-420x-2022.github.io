@@ -45,12 +45,12 @@ function makeTexture() {
 
   // this tells OpenGL which texture object to use for subsequent operations
   gl.bindTexture( gl.TEXTURE_2D, texture )
-
+  
   gl.texImage2D( 
     gl.TEXTURE_2D,    // target: you will always want gl.TEXTURE_2D
-    0,                // level of detail: 0 is the base
-    gl.RGBA, gl.RGBA, // color formats
-    gl.UNSIGNED_BYTE, // type: the type of texture data; 0-255
+    0,                // level of detail: 0 is the base, higher values are for mipmaps
+    gl.RGBA, gl.RGBA, // color formats, for webgl1 these must be the same
+    gl.UNSIGNED_BYTE, // type: the type of texture data, 0-255
     greencanvas       // pixel source: could also be video or image
   )
   // how to map when texture element is more than one pixel
@@ -59,7 +59,8 @@ function makeTexture() {
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR )
 }
 ```
-
+I know you want all [the gory details of gl.texImage2D](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D).
+  
 Place a call to our new `makeTexture` function in our `window.onload`, right before the call to `render()`.
 
 ### Update the fragment shader to show the 2D canvas in the WebGL canvas
