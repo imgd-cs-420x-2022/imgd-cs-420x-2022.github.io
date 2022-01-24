@@ -35,7 +35,7 @@ If you load the modified template, you should see the shader running in our orig
 We'll create a function to instantiate our texture, and then call that function from within our `window.onload` method.
 
 ```js
-function makeTexture() {
+function makeTexture( source ) {
   // create an OpenGL texture object
   const texture = gl.createTexture()
 
@@ -51,7 +51,7 @@ function makeTexture() {
     0,                // level of detail: 0 is the base, other values are for mipmaps
     gl.RGBA, gl.RGBA, // color formats, for webgl1 these must be the same
     gl.UNSIGNED_BYTE, // type: the type of texture data, 0-255
-    greencanvas       // pixel source: could also be video or image
+    source            // pixel source: could also be video or image
   )
   // how to map when texture element is more than one pixel
   gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR )
@@ -61,7 +61,7 @@ function makeTexture() {
 ```
 I know you want all [the gory details of gl.texImage2D](https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D).
   
-Place a call to our new `makeTexture` function in our `window.onload`, right before the call to `render()`.
+Place a call to our new `makeTexture` function in our `window.onload`, right before the call to `render()`, and pass in our `greencanvas` as an argument e.g. `makeTexture( greencanvas )`.
 
 ### Update the fragment shader to show the 2D canvas in the WebGL canvas
 
@@ -110,7 +110,7 @@ Add in some image code to our `.onload` function:
 img = document.createElement( 'img' )
 img.src = 'https://upload.wikimedia.org/wikipedia/commons/b/be/JPEG_example_image.jpg'
 img.crossOrigin = 'Anonymous'
-img.onload = makeTexture
+img.onload = ()=> makeTexture( img )
 document.body.appendChild( img )
 ```
 
@@ -176,7 +176,7 @@ vec4 blur5(sampler2D image, vec2 uv, vec2 res, vec2 direction) {
 
 void main() {
   vec2 pos = gl_FragCoord.xy / resolution;
-  gl_FragColor = blur5( uSampler, pos, resolution, vec2(2.) )
+  gl_FragColor = blur5( uSampler, pos, resolution, vec2(2.) );
 }
 ```
 
@@ -195,7 +195,7 @@ function getVideo() {
   }).then( stream => { 
     video.srcObject = stream
     video.play()
-    makeTexture()
+    makeTexture( video )
   }) 
     
   return video
