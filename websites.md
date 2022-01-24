@@ -20,3 +20,4 @@ First, fork the course repo in Github. Then, in your fork, open this file (websi
 - [Garrett Sheehan](https://justgaret23.github.io/)
 - [Tyler Sprowl](https://tsprowl.github.io/graphics.html)
 - [Evelyn Tran](https://github.com/evelyntrvn/CS420X)
+- [Rob Chiocchio](https://robch.io/CS420X/)
