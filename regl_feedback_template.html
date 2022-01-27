@@ -1,0 +1,131 @@
+<!doctype html>
+
+<!-- to get this to work:
+ 1. clone the regl_video template repo from the course organization
+ 2. replace index.html with this code (but keep the name index.html)
+ 3. run "npm install" inside the repo
+ 4. run "npm run start" inside the repo
+ 5. navigate to localhost:1234 in your browser
+-->
+
+<html lang='en'>
+  <head></head>
+  <body></body>
+  <script type='module'>
+
+import createRegl from 'regl'
+
+const regl = createRegl()
+const RADIUS = 512
+const INITIAL_CONDITIONS = (Array(RADIUS * RADIUS * 4)).fill(0)
+
+// global references that we'll populate with regl functions
+let drawQuad, feedback
+function init() {
+  const buffers = [
+    regl.framebuffer({
+      color: regl.texture({
+        radius: RADIUS,
+        data: INITIAL_CONDITIONS,
+        wrap: 'clamp'
+      }),
+      depthStencil: false
+    }),
+    regl.framebuffer({
+      color: regl.texture({
+        radius: RADIUS,
+        data: INITIAL_CONDITIONS,
+        wrap: 'clamp'
+      }),
+      depthStencil: false
+    })
+  ]
+
+  feedback = regl({
+    frag: `
+    precision mediump float;
+    uniform sampler2D prevState;
+    uniform sampler2D video;
+    varying vec2 uv;
+    void main() {
+      vec3 last = texture2D( prevState, uv ).rgb;
+      vec3 videocolor = texture2D( video, uv ).rgb;
+      vec3 feedback = last * .95 + videocolor * .05;
+      gl_FragColor = vec4( feedback, 1. );
+    }`,
+
+    uniforms: {
+      video: regl.prop('video')
+    },
+
+    framebuffer: ({tick}) => buffers[(tick + 1) % 2]
+  })
+
+  drawQuad = regl({
+    frag: `
+    precision mediump float;
+    uniform sampler2D prevState;
+    varying vec2 uv;
+    void main() {
+      vec3 color  = texture2D(prevState, uv).rgb;
+      gl_FragColor = vec4(color, 1);
+    }`,
+
+    vert: `
+    precision mediump float;
+    attribute vec2 position;
+    varying vec2 uv;
+    void main() {
+      uv = 0.5 * (position + 1.0);
+      gl_Position = vec4(position, 0, 1);
+    }`,
+
+    attributes: {
+      position: regl.buffer([
+        [-1,-1],  // no need to flatten nested arrays, regl automatically
+        [-1, 1],  // unrolls them into a typedarray (default Float32)
+        [1,  1],
+        [1, -1],
+        [1,  1],
+        [-1,-1]
+       ])
+    },
+
+    uniforms: {
+      prevState: ({tick}) => buffers[tick % 2]
+    },
+
+    depth: { enable: false },
+
+    count:6
+  })
+}
+
+function run() {
+  regl.frame(() => {
+    drawQuad(() => {
+      feedback({ video: regl.texture( video ) })
+      regl.draw()
+    })
+  })
+}
+
+
+const video = document.createElement('video');
+
+// request video stream
+navigator.mediaDevices.getUserMedia({
+  video:true
+}).then( stream => {
+  video.srcObject = stream
+  
+  // wait until video plays to init / run regl
+  // otherwise it throws an error
+  video.play().then( ()=> {
+    init()
+    run()
+  })
+})
+
+  </script>
+</html>
