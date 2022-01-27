@@ -226,7 +226,5 @@ let feedbackProgram,
 # Mini-Assignment (in-class, due Monday 1/31/22)
 
 Create a short experiment with feedback. You are welcome to use the live video template and work from that, but might also consider adding feedback to A2... 
-feedback is very useful / fun to explore on more than just live video. To tune the feedback, it will probably be useful to have a GUI, whether it's HTML elements
-or something like TweakPane, but this is not required for the assignment. Post a link to your course website to a live running shader. There is no need to create video documentation. 
-This assignment will count as a small part of the 10% "misc/participation" portion of your grade this term, grades will be either 100% (you made feedback!) or 0 
-(no feedback was made).
+feedback is very useful / fun to explore on more than just live video. Your assignment should differ in a substantial way from the "raw" templates we'll use in class. To tune the feedback, it will probably be useful to have a GUI, whether it's HTML elements or something like TweakPane, but this is not required for the assignment. Post a link to your course website to a live running shader. There is no need to create video documentation. 
+This assignment will count as a small part of the 10% "misc/participation" portion of your grade this term, grades will be either 100% (you made feedback with ome interesting changes from what we did in class!) or 0 (no feedback was made, or you just copied and pasted the class template).
