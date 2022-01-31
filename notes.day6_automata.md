@@ -33,7 +33,7 @@
   
 # Running the Game of Life on the GPU
 
-This tutorial builds off of the [video feedback tutorial from last class](./notes.day5_feedback.md); 
+This tutorial builds off of the [video feedback tutorial from last class](./notes.day5_video_feedback.md); 
 I've pulled the basic concepts into a [template that we can start with](./gol_template.html) that removes the live video texturing
 and a bunch of associated code. It also breaks our rather long `window.onload` function into separate functions for creating the triangle we'll draw to,
 for creating our shader programs, and for creating our OpenGL texture objects. The template should run without errors when you open it in the browser,
