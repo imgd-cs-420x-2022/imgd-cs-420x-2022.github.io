@@ -32,15 +32,15 @@ This is an experimental course; as such this outline is subject to change. I am 
   - Read / experiment with [The Book of Shaders](http://thebookofshaders.com) up through the lesson on [Fractal Brownian Motion](https://thebookofshaders.com/13/). Due 1/24.  
   - Complete the [WebGL Intro Assignment](./A2.webgl_intro.md), due on 1/27.  
   
-### Week 3: Automata, Reaction Diffusion, and Rendering to Texture
-1/24 - Rendering to Texture, 1D / 2D Automata, Game of Life  
+### Week 3: Tech - Textures
+1/24 - [Using and accessing textures (canvas, video, images etc.)](./notes.day4_textures.md)  
 
-1/27 - Reaction Diffusion
+1/27 - [Framebuffers, render to texture, and video feedback](./notes.day5_video_feedback.md)  
+  - Complete the video feeddback mini-assignment found in the notes for the day. Due 1/31.
  
-### Week 4: Perlin Flows and Modular GLSL,
-1/31 -  [Modular GLSL](./notes.day8.md). Assignments: 
-  - [Simulation](./simulation.md) due 2/20. 
-  - Read the chapters on [Cellular Noise](https://thebookofshaders.com/12/) and [Fractal Brownian Motion](https://thebookofshaders.com/13/) in the Book of Shaders.  
+### Week 4: Automata and Morphogenesis
+1/31 - [Automata](./notes.day6_automata.md) 
+  - Complete the [Reaction Diffusion assignment](./A3.reaction_diffusion.md), due on 2/7.  
 
 ### Week 5: Interaction in Digital Arts
 
