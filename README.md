@@ -44,12 +44,11 @@ This is an experimental course; as such this outline is subject to change. I am 
 
 2/3 - [Vertex Shaders and Transform Feedback](./notes.day7_transform_feedback.md)  
 
-### Week 5: Interaction in Digital Arts
+### Week 5: Agent-based Simulations
 
-### Week 6: Other ways to tame the GPU: OpenCL + WebGPU + CUDA
+### Week 6: Interaction in Digital Arts
 
-### Week 7: ???
-
+### Week 7: Other ways to tame the GPU: OpenCL + WebGPU + CUDA
 
 ### Week 8: Final Project Presentations &amp; Wrapup  
 3/2 - Wrap-up, preliminary final project critiques  
