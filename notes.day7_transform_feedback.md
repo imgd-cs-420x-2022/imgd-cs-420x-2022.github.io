@@ -200,7 +200,7 @@ First specify a global `particleCount` variable:
 OK, let's change our buffer data inside of `window.onload` to store many particles.
 
 ```js
-const particleData = new Float32Array( particleCount * 3 )
+const particleData = new Float32Array( particleCount * 4 )
 for( let i = 0; i < particleCount * 4; i+= 4 ) {
   particleData[ i ] = -1
   particleData[ i + 1 ] = -1 + Math.random() * 2
@@ -238,7 +238,7 @@ This basically just adds in dynamic velocity, and turns down the brightness of o
       
       gl_PointSize = 10.;
       out_vpos = vec4( x, a_position.y, a_position.z, 1.);
-      gl_Position = o_vpos;
+      gl_Position = out_vpos;
     }
   </script>
 
