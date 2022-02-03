@@ -38,9 +38,11 @@ This is an experimental course; as such this outline is subject to change. I am 
 1/27 - [Framebuffers, render to texture, and video feedback](./notes.day5_video_feedback.md)  
   - Complete the video feeddback mini-assignment found in the notes for the day. Due 1/31.
  
-### Week 4: Automata and Morphogenesis
-1/31 - [Automata](./notes.day6_automata.md) 
-  - Complete the [Reaction Diffusion assignment](./A3.reaction_diffusion.md), due on 2/7.  
+### Week 4: Automata and Morphogenesis, Vertex Shaders
+1/31 - [Automata](./notes.day6_automata.md)  
+  - Complete the [Reaction Diffusion assignment](./A3.reaction_diffusion.md), due on 2/7.
+
+2/3 - [Vertex Shaders and Transform Feedback](./notes.day7_transform_feedback.md)  
 
 ### Week 5: Interaction in Digital Arts
 
