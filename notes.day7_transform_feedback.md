@@ -67,7 +67,7 @@ Let's update our shaders. There's a couple of steps we need to take. First, we'l
 
     void main() {
       gl_PointSize = 50.;
-      gl_Position = vec4( a_pos, 0., 1. );
+      gl_Position = vec4( a_position, 0., 1. );
     }
   </script>
 
@@ -131,10 +131,10 @@ In our `window.onload` add the following code *after* creating our shader progra
 ```js
 transformFeedback = gl.createTransformFeedback()
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback)
-gl.transformFeedbackVaryings( program, ['o_vpos'], gl.SEPARATE_ATTRIBS )
+gl.transformFeedbackVaryings( program, ['out_vpos'], gl.SEPARATE_ATTRIBS )
 ```
 
-This tells our shader program that our `o_vpos` (short for output_verticalPosition) will be fed back into the shader.
+This tells our shader program that our `out_vpos` (short for output_verticalPosition) will be fed back into the shader.
 
 ### Update our render function
 Change the render function to the following:
@@ -175,20 +175,20 @@ Last but not least:
 precision mediump float;
 in vec2 a_position;
 
-out vec2 o_vpos;
+out vec2 out_vpos;
 
 void main() {
   float x = a_position.x + .01;
   if( x >= 1. ) x = -1.;
   
   gl_PointSize = 5.;
-  o_vpos = vec2( x, a_position.y );
+  out_vpos = vec2( x, a_position.y );
   
-  gl_Position = vec4( o_vpos, 0., 1. );
+  gl_Position = vec4( out_vpos, 0., 1. );
 }
 ```
 
-Since `o_vpos` is an `out`, this now gets exported from the vertex shader and stored in our buffer object. This only happens because of our previous call to: `gl.transformFeedbackVaryings( program, ['o_vpos'], gl.SEPARATE_ATTRIBS )`
+Since `out_vpos` is an `out`, this now gets exported from the vertex shader and stored in our buffer object. This only happens because of our previous call to: `gl.transformFeedbackVaryings( program, ['out_vpos'], gl.SEPARATE_ATTRIBS )`
 
 Make a copy of your file and continue working from that.
 
@@ -200,7 +200,7 @@ First specify a global `particleCount` variable:
 OK, let's change our buffer data inside of `window.onload` to store many particles.
 
 ```js
-const particleData = new Float32Array( particleCount * 4 )
+const particleData = new Float32Array( particleCount * 3 )
 for( let i = 0; i < particleCount * 4; i+= 4 ) {
   particleData[ i ] = -1
   particleData[ i + 1 ] = -1 + Math.random() * 2
@@ -217,7 +217,7 @@ gl.bindBuffer( gl.ARRAY_BUFFER, buffer1 )
 gl.bufferData( gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_COPY )
 
 gl.bindBuffer( gl.ARRAY_BUFFER, buffer2 )
-// four numbers, each with 4 bytes (32 bits)
+// for each particle (vertex) we need four numbers, each with 4 bytes (32 bits)
 gl.bufferData( gl.ARRAY_BUFFER, particleCount * 4 * 4, gl.DYNAMIC_COPY )
 ```
 
@@ -230,13 +230,14 @@ This basically just adds in dynamic velocity, and turns down the brightness of o
   <script id='vertex' type='x-shader/x-vertex'>#version 300 es
     precision mediump float;
     in vec4 a_position;
-    out vec4 o_vpos;
+    out vec4 out_vpos;
+    
     void main() {
       float x = a_position.x + a_position.z;
       if( x >= 1. ) x = -1.;
       
       gl_PointSize = 10.;
-      o_vpos = vec4( x, a_position.y, a_position.z, 1.);
+      out_vpos = vec4( x, a_position.y, a_position.z, 1.);
       gl_Position = o_vpos;
     }
   </script>
@@ -271,3 +272,26 @@ Add this to our window.onload function to get blending:
 gl.enable(gl.BLEND);
 gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
 ```
+
+### Use our buffer in the fragment shader
+The `out` declaration for the `out_vpos` variable means that, in addition to being fed back into our buffer, the value will also be available inside of our fragment shader; this is similar to how `varyings` worked in WebGL 1. Let's change our fragment shader to change the color of each particle based on it's speed:
+
+```glsl
+precision mediump float;
+
+// this is all we have to add to get access to the out_vpos 
+// vec4 exported from the vertex shader
+in vec4 out_vpos;
+
+uniform float time;
+uniform vec2 resolution;
+
+out vec4 o_frag;
+
+void main() {
+  // tint particle green based on speed
+  o_frag = vec4(.5, out_vpos.z * 50., .1, .1);
+}
+```
+
+QUICK EXERCISE: You might have noticed earlier that we have an unused float in our buffer... we give each vertex an x,y and speed value, but there's four numbers of information available to use. See if you can use that fourth number to change the amount of blue in each particle.
