@@ -118,7 +118,7 @@ gl.bindBuffer( gl.ARRAY_BUFFER, buffer1 )
 gl.bufferData( gl.ARRAY_BUFFER, new Float32Array([-1,0]), gl.DYNAMIC_COPY )
 
 gl.bindBuffer( gl.ARRAY_BUFFER, buffer2 )
-// four numbers, each with 4 bytes (32 bits)
+// two numbers, each with 4 bytes (32 bits)
 gl.bufferData( gl.ARRAY_BUFFER, 8, gl.DYNAMIC_COPY )      
 ```
 
