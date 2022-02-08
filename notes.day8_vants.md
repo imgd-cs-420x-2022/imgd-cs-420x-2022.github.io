@@ -56,14 +56,14 @@ Our beginning HTML template will look like this:
   </body>
 
   <script id='copyVertex' type='x-shader/x-vertex'></script>
-  <script id='copyFragment’ type='x-shader/x-fragment’></script>
-  <script id=‘simulationVertex' type='x-shader/x-vertex'></script>
-  <script id=‘simulationFragment’ type='x-shader/x-fragment’></script>
+  <script id='copyFragment' type='x-shader/x-fragment'></script>
+  <script id='simulationVertex' type='x-shader/x-vertex'></script>
+  <script id='simulationFragment' type='x-shader/x-fragment'></script>
 
   <script type=‘text/javascript’>
-	window.onload = function() {
-
-  }
+    window.onload = function() {
+    
+    }
   </script>
 
 </html>
@@ -217,7 +217,7 @@ function makeCopyBuffer() {
 ```js
 function makeCopyUniforms() {
   uRes = gl.getUniformLocation( copyProgram, 'resolution' )
-  gl.uniform2f( uRes, dimensions.width, dimensions )
+  gl.uniform2f( uRes, dimensions.width, dimensions.height )
 
   // get position attribute location in shader
   copyPosition = gl.getAttribLocation( copyProgram, 'a_pos' )
