@@ -45,6 +45,10 @@ This is an experimental course; as such this outline is subject to change. I am 
 2/3 - [Vertex Shaders and Transform Feedback](./notes.day7_transform_feedback.md)  
 
 ### Week 5: Agent-based Simulations
+2/7 - [Langton's Ants](./notes.day8_vants.md)   
+
+2/10 - [Physarum](./notes.day9_physarum.md)  
+  - Complete the [Physarum assignment](./A4.physarum.md), due on 2/17.
 
 ### Week 6: Interaction in Digital Arts
 
