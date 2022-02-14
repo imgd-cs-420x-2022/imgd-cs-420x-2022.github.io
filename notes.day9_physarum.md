@@ -299,7 +299,6 @@ function render() {
   gl.useProgram( simulationProgram )
 
   gl.bindFramebuffer( gl.FRAMEBUFFER, framebuffer )
-  gl.uniform1f( uFrame, frame )
 
   // use the framebuffer to write to our textureFront texture
   gl.framebufferTexture2D( gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, textureFront, 0 )
