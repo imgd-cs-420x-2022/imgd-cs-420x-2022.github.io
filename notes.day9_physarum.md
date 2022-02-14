@@ -286,7 +286,7 @@ function makeDecayDiffuseUniforms() {
 }
 ```
 
-Go ahead and test the file to make sure there’s no errors before we actually call the shader in our render function.
+Make sure you add `ddProgram` and `ddPosition` as declared variables at the top of your `<script>` tag. Go ahead and test the file to make sure there’s no errors before we actually call the shader in our render function.
 
 ## Final render function
 Not to big a difference here from our Langton simulation. The main difference is that we’ll bring back our texture swap, and then, instead of copying one texture to the other, we’ll run our diffuse / decay shader. Here’s how it looks:
