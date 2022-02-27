@@ -1,5 +1,5 @@
 # Final Project
-For the final project, the goal is to explore visual processing and interaction with your simulation. Your project should incorporate *two* of the following three explorations (although, if you have another idea, feel free to pitch it to me! I want you to do something that’s interesting / sounds fun):
+For the final project, the goal is to explore visual processing and interaction with your GLSL simulation. Your project should incorporate *two* of the following three explorations (although, if you have another idea, feel free to pitch it to me! I want you to do something that’s interesting / sounds fun):
 
 1. Given a simulation, how can we interact with it in interesting ways? We will discuss some of these options in class on Monday, but for now consider:
 
